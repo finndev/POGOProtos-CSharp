@@ -25,7 +25,7 @@ namespace POGOProtos.Networking.Requests.Messages {
             "CkVQT0dPUHJvdG9zL05ldHdvcmtpbmcvUmVxdWVzdHMvTWVzc2FnZXMvSW5j",
             "ZW5zZUVuY291bnRlck1lc3NhZ2UucHJvdG8SJ1BPR09Qcm90b3MuTmV0d29y",
             "a2luZy5SZXF1ZXN0cy5NZXNzYWdlcyJLChdJbmNlbnNlRW5jb3VudGVyTWVz",
-            "c2FnZRIUCgxlbmNvdW50ZXJfaWQYASABKAMSGgoSZW5jb3VudGVyX2xvY2F0",
+            "c2FnZRIUCgxlbmNvdW50ZXJfaWQYASABKAQSGgoSZW5jb3VudGVyX2xvY2F0",
             "aW9uGAIgASgJYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
@@ -72,9 +72,9 @@ namespace POGOProtos.Networking.Requests.Messages {
 
     /// <summary>Field number for the "encounter_id" field.</summary>
     public const int EncounterIdFieldNumber = 1;
-    private long encounterId_;
+    private ulong encounterId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    public long EncounterId {
+    public ulong EncounterId {
       get { return encounterId_; }
       set {
         encounterId_ = value;
@@ -113,7 +113,7 @@ namespace POGOProtos.Networking.Requests.Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override int GetHashCode() {
       int hash = 1;
-      if (EncounterId != 0L) hash ^= EncounterId.GetHashCode();
+      if (EncounterId != 0UL) hash ^= EncounterId.GetHashCode();
       if (EncounterLocation.Length != 0) hash ^= EncounterLocation.GetHashCode();
       return hash;
     }
@@ -125,9 +125,9 @@ namespace POGOProtos.Networking.Requests.Messages {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public void WriteTo(pb::CodedOutputStream output) {
-      if (EncounterId != 0L) {
+      if (EncounterId != 0UL) {
         output.WriteRawTag(8);
-        output.WriteInt64(EncounterId);
+        output.WriteUInt64(EncounterId);
       }
       if (EncounterLocation.Length != 0) {
         output.WriteRawTag(18);
@@ -138,8 +138,8 @@ namespace POGOProtos.Networking.Requests.Messages {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public int CalculateSize() {
       int size = 0;
-      if (EncounterId != 0L) {
-        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EncounterId);
+      if (EncounterId != 0UL) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt64Size(EncounterId);
       }
       if (EncounterLocation.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(EncounterLocation);
@@ -152,7 +152,7 @@ namespace POGOProtos.Networking.Requests.Messages {
       if (other == null) {
         return;
       }
-      if (other.EncounterId != 0L) {
+      if (other.EncounterId != 0UL) {
         EncounterId = other.EncounterId;
       }
       if (other.EncounterLocation.Length != 0) {
@@ -169,7 +169,7 @@ namespace POGOProtos.Networking.Requests.Messages {
             input.SkipLastField();
             break;
           case 8: {
-            EncounterId = input.ReadInt64();
+            EncounterId = input.ReadUInt64();
             break;
           }
           case 18: {

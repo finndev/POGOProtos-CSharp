@@ -128,6 +128,10 @@ namespace POGOProtos.Networking.Envelopes {
     private static readonly pb::FieldCodec<global::POGOProtos.Networking.Envelopes.Unknown6> _repeated_unknown6_codec
         = pb::FieldCodec.ForMessage(50, global::POGOProtos.Networking.Envelopes.Unknown6.Parser);
     private readonly pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6> unknown6_ = new pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6>();
+    /// <summary>
+    ///  Unknown6 is required to get a response.
+    ///  For an example check https://github.com/keyphact/pgoapi/blob/75eba6b5b630841ee4f7c2ea983f15874fb0862d/pgoapi/rpc_api.py#L192-L212
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public pbc::RepeatedField<global::POGOProtos.Networking.Envelopes.Unknown6> Unknown6 {
       get { return unknown6_; }
